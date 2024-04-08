@@ -29,6 +29,7 @@ resource "azurerm_windows_web_app" "backwebapp" {
   location            = "Central India"
   resource_group_name = "my-sample-infra-rg"
   service_plan_id = azurerm_service_plan.appserviceplan.id
+  public_network_access_enabled = false
 
   site_config {}
 }
